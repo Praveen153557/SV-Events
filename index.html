@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marriage Event Pricing Request</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            padding: 40px;
+        }
+        .form-container {
+            background: #fff;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            margin-top: 15px;
+            display: block;
+            color: #555;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Marriage Event Pricing Request</h2>
+        <form onsubmit="event.preventDefault(); alert('Your request has been submitted!');">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="date">Preferred Event Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="guests">Estimated Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+
+            <label for="venue">Preferred Venue Type:</label>
+            <select id="venue" name="venue">
+                <option value="indoor">Indoor</option>
+                <option value="outdoor">Outdoor</option>
+                <option value="banquet">Banquet Hall</option>
+                <option value="hotel">Hotel</option>
+                <option value="custom">Custom Venue</option>
+            </select>
+
+            <label for="message">Additional Details / Requests:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Mention themes, special requirements, etc."></textarea>
+
+            <button type="submit">Request Pricing</button>
+            <p class="note">Note: This form does not send data anywhere. You can connect it to a backend or email service later.</p>
+        </form>
+    </div>
+</body>
+</html>
+
+
